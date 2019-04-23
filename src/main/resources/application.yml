@@ -1,5 +1,5 @@
 server:
-    port: 87612
+    port: 87613
 spring:
   application:
     name: app-itmayiedu-eureka  #注册中心名字相同
