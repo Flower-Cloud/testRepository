@@ -1,0 +1,16 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: app-itmayiedu-eureka  #注册中心名字相同
+eureka:
+  instance:
+    hostname: 127.0.0.1 #eureka实例的主机名
+  client:
+    register-with-eureka: false  #不把自己注册到eureka上
+    fetch-registry: false  #不从eureka上获取服务的注册信息
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:9761/eureka/
+  server:
+    enable-self-preservation: false  #测试是关闭自我保护机制 2秒剔除
+    eviction-interval-timer-in-ms: 2000
